@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Underwater Image Evaluation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add before your existing script tags -->
+</head>
+<body>
+    <div class="container">
+        <h1>Score Underwater Images</h1>
+        
+        <div class="image-row">
+            <!-- Original Image -->
+            <div class="image-card">
+                <h3>Original</h3>
+                <img id="original-img" src="images/originals/sample.jpg">
+            </div>
+
+            <!-- Enhanced 1 -->
+            <div class="image-card">
+                <h3>Enhanced 1</h3>
+                <img src="images/enhanced/sample_1.jpg">
+                <input type="number" min="1" max="10" class="score-input" data-version="1">
+            </div>
+
+            <!-- Enhanced 2 -->
+            <div class="image-card">
+                <h3>Enhanced 2</h3>
+                <img src="images/enhanced/sample_2.jpg">
+                <input type="number" min="1" max="10" class="score-input" data-version="2">
+            </div>
+
+            <!-- Enhanced 3 -->
+            <div class="image-card">
+                <h3>Enhanced 3</h3>
+                <img src="images/enhanced/sample_3.jpg">
+                <input type="number" min="1" max="10" class="score-input" data-version="3">
+            </div>
+        </div>
+
+        <button id="submit-btn">Submit Scores</button>
+    </div>
+
+    <!-- Firebase SDKs first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <!-- Your Firebase config -->
+    <script src="firebase-config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
